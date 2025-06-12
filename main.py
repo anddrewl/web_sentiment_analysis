@@ -25,7 +25,8 @@ for headline in headlines:
 for sentiment in sentiments:
   plt.figure(figsize=(8, 5))
   sns.barplot(x=['Negative', 'Neutral', 'Positive'], y=[sentiment['Negative'], sentiment['Neutral'], sentiment['Positive']])
-  plt.title(f'Sentiment Scores for {sentiment['Headline']}')
+  plt.suptitle(f'Sentiment Scores for {sentiment['Headline']}')
+  plt.title(f"Compound Sentiment: {sentiment['Compound']}")
   plt.ylabel('Score')
   plt.savefig(f'output/sentiment_{sentiment['Headline'].replace(" ", "_")}.png')
-  plt.show()
+  plt.close()
