@@ -1,0 +1,5 @@
+Flask==2.3.2
+pandas==2.0.3
+vaderSentiment==3.3.2
+matplotlib==3.7.2
+tweepy==4.14.0
